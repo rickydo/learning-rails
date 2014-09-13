@@ -58,7 +58,7 @@
 LearningRails::Application.routes.draw do
   get '/' => 'pages#index'
 
-  # post '/grandma' => 'pages#user_response'
+  post '/grandma' => 'pages#user_response'
 
   # get '/grandma/response' => 'pages#user_response'
 end

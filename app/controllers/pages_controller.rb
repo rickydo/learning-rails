@@ -3,14 +3,14 @@ class PagesController < ApplicationController
     @grandma = params[:grandma]
   end
 
-  # def user_response
-  #   if params[:user_input] == params[:user_input].upcase
-  #    @response = "HI !!!!!!!! "
-  #   else
-  #     @response = "Speak up, kiddo!"
-  #   end
-  #    redirect "/grandma/response"
-  # end
+  def user_response
+    if params[:user_input] == params[:user_input].upcase
+     response = "HI !!!!!!!! "
+    else
+      response = "Speak up, kiddo!"
+    end
+    redirect_to action: :index, grandma: response
+  end
 end
 
 # -------Above code and in /config/routes.rb-------
